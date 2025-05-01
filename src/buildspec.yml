@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - aws deploy push 
+        --application-name h4b-udemy
+        --s3-location s3://udemy20250501-artifact/artifact.zip
+        --source src
+artifacts:
+  files:
+    - '**/*'
+  base-directory: src
